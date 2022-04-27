@@ -1,5 +1,32 @@
-{{page-title "HowAboutFlObject"}}
+<div>
+  <p><code>(first|last)Object</code></p>
+  <p>
+    {{#each this.items as |item|}}
+      <span class="
+        {{if (eq item this.items.firstObject) 'first'}}
+        {{if (eq item this.items.lastObject) 'last'}}
+      ">
+        {{item}}
+      </span>
+    {{/each}}
+  </p>
+</div>
 
-<h2 id="title">Welcome to Ember</h2>
+<div>
+  <p><code>Array.prototype.at</code></p>
+  <p>
+    {{#each this.items as |item|}}
+      <span class="
+        {{if (eq item this.first) 'first'}}
+        {{if (eq item this.last) 'last'}}
+      ">
+        {{item}}
+      </span>
+    {{/each}}
+  </p>
+  <p><code>this.first</code>: {{this.first}}</p>
+  <p><code>this.last</code>: {{this.last}}</p>
+</div>
 
-{{outlet}}
+<button {{on "click" this.oldPush}}>old</button>
+<button {{on "click" this.push}}>new</button>
