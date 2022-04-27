@@ -1,32 +1,75 @@
 <div>
-  <p><code>(first|last)Object</code></p>
-  <p>
-    {{#each this.items as |item|}}
-      <span class="
-        {{if (eq item this.items.firstObject) 'first'}}
-        {{if (eq item this.items.lastObject) 'last'}}
-      ">
-        {{item}}
-      </span>
-    {{/each}}
-  </p>
+  <h2>native array with prototype extensions</h2>
+  <div>
+    <p>
+      <code>(first|last)Object</code>
+      {{#each this.untracked.items as |item|}}
+        <span class="
+          {{if (eq item this.untracked.items.firstObject) 'first'}}
+          {{if (eq item this.untracked.items.lastObject) 'last'}}
+        ">
+          {{item}}
+        </span>
+      {{/each}}
+    </p>
+  </div>
+
+  <div>
+    <p>
+      <code>Array.prototype.at</code>
+      {{#each this.untracked.items as |item|}}
+        <span class="
+          {{if (eq item this.untracked.first) 'first'}}
+          {{if (eq item this.untracked.last) 'last'}}
+        ">
+          {{item}}
+        </span>
+      {{/each}}
+    </p>
+    <p><code>this.untracked.items.firstObject</code>: {{this.untracked.items.firstObject}}</p>
+    <p><code>this.untracked.items.lastObject</code>: {{this.untracked.items.lastObject}}</p>
+    <p><code>this.untracked.first</code>: {{this.untracked.first}}</p>
+    <p><code>this.untracked.last</code>: {{this.untracked.last}}</p>
+  </div>
+
+  <button {{on "click" this.untracked.oldPush}}>old</button>
+  <button {{on "click" this.untracked.push}}>new</button>
 </div>
 
 <div>
-  <p><code>Array.prototype.at</code></p>
-  <p>
-    {{#each this.items as |item|}}
-      <span class="
-        {{if (eq item this.first) 'first'}}
-        {{if (eq item this.last) 'last'}}
-      ">
-        {{item}}
-      </span>
-    {{/each}}
-  </p>
-  <p><code>this.first</code>: {{this.first}}</p>
-  <p><code>this.last</code>: {{this.last}}</p>
-</div>
+  <h2>tracked array (with prototype extensions)</h2>
+  <div>
+    <p>
+      <code>(first|last)Object</code>
+      {{#each this.tracked.items as |item|}}
+        <span class="
+          {{if (eq item this.tracked.items.firstObject) 'first'}}
+          {{if (eq item this.tracked.items.lastObject) 'last'}}
+        ">
+          {{item}}
+        </span>
+      {{/each}}
+    </p>
+  </div>
 
-<button {{on "click" this.oldPush}}>old</button>
-<button {{on "click" this.push}}>new</button>
+  <div>
+    <p>
+      <code>Array.prototype.at</code>
+      {{#each this.tracked.items as |item|}}
+        <span class="
+          {{if (eq item this.tracked.first) 'first'}}
+          {{if (eq item this.tracked.last) 'last'}}
+        ">
+          {{item}}
+        </span>
+      {{/each}}
+    </p>
+    <p><code>this.tracked.firstObject</code>: {{this.tracked.items.firstObject}}</p>
+    <p><code>this.tracked.lastObject</code>: {{this.tracked.items.lastObject}}</p>
+    <p><code>this.tracked.first</code>: {{this.tracked.first}}</p>
+    <p><code>this.tracked.last</code>: {{this.tracked.last}}</p>
+  </div>
+
+  <button {{on "click" this.tracked.oldPush}}>old</button>
+  <button {{on "click" this.tracked.push}}>new</button>
+</div>
