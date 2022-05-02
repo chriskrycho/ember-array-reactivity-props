@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
-import { tracked, TrackedArray } from 'tracked-built-ins';
+import { tracked } from 'tracked-built-ins';
 export default class ApplicationController extends Controller {
   widgets = [
     {
