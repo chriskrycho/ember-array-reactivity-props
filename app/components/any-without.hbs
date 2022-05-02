@@ -6,25 +6,25 @@
     {{this.untracked.items}}
   </p>
 
-  <p><code>this.untracked.anyLargerFour</code>: {{this.untracked.anyLargerFour}}</p>
-  <p class="blue"><code>this.untracked.someLargerFour</code>: {{this.untracked.someLargerFour}}</p>
-  <p><code>this.untracked.withoutFour</code>: {{this.untracked.withoutFour}}</p>
-  <p class="blue"><code>this.untracked.filterFour</code>: {{this.untracked.filterFour}}</p>
+  <p><code>this.untracked.anyLargerSix</code>: {{this.untracked.anyLargerSix}}</p>
+  <p class="blue"><code>this.untracked.someLargerSix</code>: {{this.untracked.someLargerSix}}</p>
+  <p><code>this.untracked.withoutSix</code>: {{this.untracked.withoutSix}}</p>
+  <p class="blue"><code>this.untracked.filterSix</code>: {{this.untracked.filterSix}}</p>
 
   <button {{on "click" this.untracked.oldPush}}>old</button>
   <button {{on "click" this.untracked.push}}>new</button>
 
-  <p class="red">Try first do some 'new' push then do an 'old' push. this.untracked.withoutFour value changed.</p>
+  <p class="red">old push stopped being reactive after some points</p>
 </div>
 
 <div>
   <h2>tracked array (with prototype extensions)</h2>
   <p><code>tracked array</code>{{this.tracked.items}}</p>
 
-  <p><code>this.tracked.anyLargerFour</code>: {{this.tracked.anyLargerFour}}</p>
-  <p class="blue"><code>this.tracked.someLargerFour</code>: {{this.tracked.someLargerFour}}</p>
-  <p><code>this.tracked.withoutFour</code>: {{this.tracked.withoutFour}}</p>
-  <p class="blue"><code>this.tracked.filterFour</code>: {{this.tracked.filterFour}}</p>
+  <p><code>this.tracked.anyLargerSix</code>: {{this.tracked.anyLargerSix}}</p>
+  <p class="blue"><code>this.tracked.someLargerSix</code>: {{this.tracked.someLargerSix}}</p>
+  <p><code>this.tracked.withoutSix</code>: {{this.tracked.withoutSix}}</p>
+  <p class="blue"><code>this.tracked.filterSix</code>: {{this.tracked.filterSix}}</p>
 
   <button {{on "click" this.tracked.oldPush}}>old</button>
   <button {{on "click" this.tracked.push}}>new</button>

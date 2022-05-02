@@ -4,20 +4,20 @@ import { TrackedArray } from 'tracked-built-ins';
 class Untracked {
   items = [1, 2, 3];
 
-  get anyLargerFour() {
-    return this.items.any((item) => item > 4);
+  get anyLargerSix() {
+    return this.items.any((item) => item > 6);
   }
 
-  get someLargerFour() {
-    return this.items.some((item) => item > 4);
+  get someLargerSix() {
+    return this.items.some((item) => item > 6);
   }
 
-  get withoutFour() {
-    return this.items.without(4);
+  get withoutSix() {
+    return this.items.without(6);
   }
 
-  get filterFour() {
-    return this.items.filter((item) => item !== 4);
+  get filterSix() {
+    return this.items.filter((item) => item !== 6);
   }
 
   oldPush = () => {
@@ -32,20 +32,20 @@ class Untracked {
 class Tracked {
   items = new TrackedArray([1, 2, 3]);
 
-  get anyLargerFour() {
-    return this.items.any((item) => item > 4);
+  get anyLargerSix() {
+    return this.items.any((item) => item > 6);
   }
 
-  get someLargerFour() {
-    return this.items.some((item) => item > 4);
+  get someLargerSix() {
+    return this.items.some((item) => item > 6);
   }
 
-  get withoutFour() {
-    return this.items.without(4);
+  get withoutSix() {
+    return this.items.without(6);
   }
 
-  get filterFour() {
-    return this.items.filter((item) => item !== 4);
+  get filterSix() {
+    return this.items.filter((item) => item !== 6);
   }
   oldPush = () => {
     this.items.pushObject(this.items.length + 1);
