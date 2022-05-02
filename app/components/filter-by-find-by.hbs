@@ -1,5 +1,6 @@
 
-  <h1>filterBy, findBy</h1>
+<h1>filterBy, findBy</h1>
+<div>
   <h2>native array with prototype extensions</h2>
   <p>
     <code>native array</code>
@@ -16,12 +17,12 @@
 
   <button {{on "click" this.untracked.oldPush}}>old push banana</button>
   <button {{on "click" this.untracked.push}}>new push banana</button>
+</div>
 
-
+<div>
   <h2>tracked array (with prototype extensions)</h2>
 
-    <p>
-    <code>tracked array</code>
+  <p><code>tracked array</code>
     {{#each this.tracked.items as |item|}}
         {{item.food}}
     {{/each}}
@@ -34,3 +35,4 @@
   <p class="blue"><code>this.tracked.findYellow</code>: {{this.tracked.findYellow}}</p>
   <button {{on "click" this.tracked.oldPush}}>old push banana</button>
   <button {{on "click" this.tracked.push}}>new push banana</button>
+</div>
