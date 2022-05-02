@@ -1,0 +1,36 @@
+
+  <h1>filterBy, findBy</h1>
+  <h2>native array with prototype extensions</h2>
+  <p>
+    <code>native array</code>
+    {{#each this.untracked.items as |item|}}
+        {{item.food}}
+    {{/each}}
+  </p>
+
+  <p><code>this.untracked.filterByFruit</code>: {{this.untracked.filterByFruit}}</p>
+  <p class="blue"><code>this.untracked.filterFruit</code>: {{this.untracked.filterFruit}}</p>
+
+  <p><code>this.untracked.findByYellow</code>: {{this.untracked.findByYellow}}</p>
+  <p class="blue"><code>this.untracked.findYellow</code>: {{this.untracked.findYellow}}</p>
+
+  <button {{on "click" this.untracked.oldPush}}>old push banana</button>
+  <button {{on "click" this.untracked.push}}>new push banana</button>
+
+
+  <h2>tracked array (with prototype extensions)</h2>
+
+    <p>
+    <code>tracked array</code>
+    {{#each this.tracked.items as |item|}}
+        {{item.food}}
+    {{/each}}
+  </p>
+
+  <p><code>this.tracked.filterByFruit</code>: {{this.tracked.filterByFruit}}</p>
+  <p class="blue"><code>this.tracked.filterFruit</code>: {{this.tracked.filterFruit}}</p>
+
+  <p><code>this.tracked.findByYellow</code>: {{this.tracked.findByYellow}}</p>
+  <p class="blue"><code>this.tracked.findYellow</code>: {{this.tracked.findYellow}}</p>
+  <button {{on "click" this.tracked.oldPush}}>old push banana</button>
+  <button {{on "click" this.tracked.push}}>new push banana</button>

@@ -1,0 +1,32 @@
+
+  <h1>any, without</h1>
+  <h2>native array with prototype extensions</h2>
+  <p>
+    <code>native array</code>
+    {{this.untracked.items}}
+  </p>
+
+    <p><code>this.untracked.anyLargerFour</code>: {{this.untracked.anyLargerFour}}</p>
+    <p class="blue"><code>this.untracked.someLargerFour</code>: {{this.untracked.someLargerFour}}</p>
+    <p><code>this.untracked.withoutFour</code>: {{this.untracked.withoutFour}}</p>
+    <p class="blue"><code>this.untracked.filterFour</code>: {{this.untracked.filterFour}}</p>
+
+  <button {{on "click" this.untracked.oldPush}}>old</button>
+  <button {{on "click" this.untracked.push}}>new</button>
+
+  <p class="red">Try first do some 'new' push then do an 'old' push. this.untracked.withoutFour value changed.</p>
+
+  <h2>tracked array (with prototype extensions)</h2>
+
+    <p>
+    <code>tracked array</code>
+    {{this.tracked.items}}
+  </p>
+
+    <p><code>this.tracked.anyLargerFour</code>: {{this.tracked.anyLargerFour}}</p>
+    <p class="blue"><code>this.tracked.someLargerFour</code>: {{this.tracked.someLargerFour}}</p>
+    <p><code>this.tracked.withoutFour</code>: {{this.tracked.withoutFour}}</p>
+    <p class="blue"><code>this.tracked.filterFour</code>: {{this.tracked.filterFour}}</p>
+
+  <button {{on "click" this.tracked.oldPush}}>old</button>
+  <button {{on "click" this.tracked.push}}>new</button>
