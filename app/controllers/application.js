@@ -40,6 +40,10 @@ export default class ApplicationController extends Controller {
       name: 'sort-by',
       label: 'sortBy',
     },
+    {
+      name: 'compact',
+      label: 'compact',
+    },
   ];
 
   get selectedWidget() {
