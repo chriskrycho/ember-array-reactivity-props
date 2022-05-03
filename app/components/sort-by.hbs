@@ -1,0 +1,31 @@
+
+<div>
+  <h2>native array with prototype extensions</h2>
+  <p>
+    <code>native array</code>
+    {{#each this.untracked.items as |item|}}
+        {{item.name}}-{{item.weight}}
+    {{/each}}
+  </p>
+
+  <p><code>this.untracked.sortByWeightName</code>: {{this.untracked.sortByWeightName}}</p>
+  <p class="blue"><code>this.untracked.lodashSortWeightName</code>: {{this.untracked.lodashSortWeightName}}</p>
+
+  <button {{on "click" this.untracked.oldPush}}>old push yellow</button>
+  <button {{on "click" this.untracked.push}}>new push yellow</button>
+</div>
+
+<div>
+  <h2>tracked array (with prototype extensions)</h2>
+
+  <p><code>tracked array</code>
+    {{#each this.tracked.items as |item|}}
+        {{item.name}}-{{item.weight}}
+    {{/each}}
+  </p>
+
+  <p><code>this.tracked.sortByWeightName</code>: {{this.tracked.sortByWeightName}}</p>
+  <p class="blue"><code>this.tracked.lodashSortWeightName</code>: {{this.tracked.lodashSortWeightName}}</p>
+  <button {{on "click" this.tracked.oldPush}}>old push yellow</button>
+  <button {{on "click" this.tracked.push}}>new push yellow</button>
+</div>

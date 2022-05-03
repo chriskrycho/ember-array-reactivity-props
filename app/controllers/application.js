@@ -32,6 +32,14 @@ export default class ApplicationController extends Controller {
       name: 'is-every-is-any',
       label: 'isEvery, isAny',
     },
+    {
+      name: 'uniq-by-map-by',
+      label: 'uniqBy, mapBy',
+    },
+    {
+      name: 'sort-by',
+      label: 'sortBy',
+    },
   ];
 
   get selectedWidget() {
