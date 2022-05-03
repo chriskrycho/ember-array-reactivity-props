@@ -10,7 +10,7 @@ export default class ApplicationController extends Controller {
   widgets = [
     {
       name: 'first-object-last-object',
-      label: '(first|last)object, objectAt',
+      label: '(first|last)object, objectAt, objectsAt',
     },
     {
       name: 'any-without',
@@ -35,7 +35,9 @@ export default class ApplicationController extends Controller {
   ];
 
   get selectedWidget() {
-    return this.widgetId || this.widgets[0].name;
+    return this.widgets.find(
+      (widget) => widget.name === (this.widgetId || this.widgets[0].name)
+    );
   }
 
   @action

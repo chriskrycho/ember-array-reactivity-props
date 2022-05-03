@@ -1,5 +1,3 @@
-
-<h1>(first|last)Object, objectAt</h1>
 <h2>native array with prototype extensions</h2>
 <p>
   <code>(first|last)Object</code>
@@ -43,6 +41,8 @@
 <p><code>this.untracked.last</code>: {{this.untracked.last}}</p>
 <p><code>this.untracked.firstObjectAt</code>: {{this.untracked.firstObjectAt}}</p>
 <p><code>this.untracked.lastObjectAt</code>: {{this.untracked.lastObjectAt}}</p>
+<p><code>this.untracked.objectsAt</code>: {{this.untracked.objectsAt}}</p>
+<p><code>this.untracked.objectsAtEqu</code>: {{this.untracked.objectsAtEqu}}</p>
 
 
 <button {{on "click" this.untracked.oldPush}}>old</button>
@@ -91,9 +91,10 @@
 <p><code>this.tracked.lastObject</code>: {{this.tracked.items.lastObject}}</p>
 <p><code>this.tracked.first</code>: {{this.tracked.first}}</p>
 <p><code>this.tracked.last</code>: {{this.tracked.last}}</p>
-<p><code>this.tracked.firstObjectAt</code>: {{this.untracked.firstObjectAt}}</p>
-<p><code>this.tracked.lastObjectAt</code>: {{this.untracked.lastObjectAt}}</p>
-
+<p><code>this.tracked.firstObjectAt</code>: {{this.tracked.firstObjectAt}}</p>
+<p><code>this.tracked.lastObjectAt</code>: {{this.tracked.lastObjectAt}}</p>
+<p><code>this.tracked.objectsAt</code>: {{this.tracked.objectsAt}}</p>
+<p><code>this.tracked.objectsAtEqu</code>: {{this.tracked.objectsAtEqu}}</p>
 
 <button {{on "click" this.tracked.oldPush}}>old</button>
 <button {{on "click" this.tracked.push}}>new</button>

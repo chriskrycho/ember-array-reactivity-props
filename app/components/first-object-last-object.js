@@ -20,12 +20,20 @@ class Untracked {
     return this.items.objectAt(this.items.length - 1);
   }
 
-  get anyFour() {
-    return this.items.any((item) => item === 4);
+  get objectsAt() {
+    return this.items.objectsAt([
+      this.items.length - 1,
+      this.items.length - 2,
+      this.items.length - 3,
+    ]);
   }
 
-  get someFour() {
-    return this.items.any((item) => item === 4);
+  get objectsAtEqu() {
+    return [
+      this.items.length - 1,
+      this.items.length - 2,
+      this.items.length - 3,
+    ].map((index) => this.items[index]);
   }
 
   oldPush = () => {
@@ -54,6 +62,22 @@ class Tracked {
 
   get lastObjectAt() {
     return this.items.objectAt(this.items.length - 1);
+  }
+
+  get objectsAt() {
+    return this.items.objectsAt([
+      this.items.length - 1,
+      this.items.length - 2,
+      this.items.length - 3,
+    ]);
+  }
+
+  get objectsAtEqu() {
+    return [
+      this.items.length - 1,
+      this.items.length - 2,
+      this.items.length - 3,
+    ].map((index) => this.items[index]);
   }
 
   oldPush = () => {

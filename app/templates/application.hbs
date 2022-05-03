@@ -7,5 +7,6 @@
     {{/each}}
   </select>
 
-  {{component this.selectedWidget}}
+  <h1>{{this.selectedWidget.label}}</h1>
+  {{component this.selectedWidget.name}}
 </div>
