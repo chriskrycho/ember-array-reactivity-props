@@ -86,7 +86,7 @@ class Tracked {
   };
 }
 
-export default class UniqComponent extends Component {
+export default class RejectComponent extends Component {
   untracked = new Untracked();
   tracked = new Tracked();
 }

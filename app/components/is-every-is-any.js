@@ -95,7 +95,7 @@ class Tracked {
   };
 }
 
-export default class UniqComponent extends Component {
+export default class IsEveryComponent extends Component {
   untracked = new Untracked();
   tracked = new Tracked();
 }

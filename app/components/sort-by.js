@@ -62,7 +62,7 @@ class Tracked {
   };
 }
 
-export default class sortByComponent extends Component {
+export default class SortByComponent extends Component {
   untracked = new Untracked();
   tracked = new Tracked();
 }

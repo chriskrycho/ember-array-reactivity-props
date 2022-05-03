@@ -89,7 +89,7 @@ class Tracked {
   };
 }
 
-export default class filterByComponent extends Component {
+export default class FilterByComponent extends Component {
   untracked = new Untracked();
   tracked = new Tracked();
 }

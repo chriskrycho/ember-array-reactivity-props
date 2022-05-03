@@ -44,6 +44,10 @@ export default class ApplicationController extends Controller {
       name: 'compact',
       label: 'compact',
     },
+    {
+      name: 'set-each',
+      label: 'setEach',
+    },
   ];
 
   get selectedWidget() {
