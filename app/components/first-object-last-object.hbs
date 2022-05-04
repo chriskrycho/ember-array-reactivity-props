@@ -35,6 +35,10 @@
   {{/each}}
 </p>
 
+<p>
+  <code>get helper: first</code> {{get this.untracked.items '0'}}
+</p>
+
 <p><code>this.untracked.items.firstObject</code>: {{this.untracked.items.firstObject}}</p>
 <p><code>this.untracked.items.lastObject</code>: {{this.untracked.items.lastObject}}</p>
 <p><code>this.untracked.first</code>: {{this.untracked.first}}</p>
@@ -47,6 +51,8 @@
 
 <button {{on "click" this.untracked.oldPush}}>old</button>
 <button {{on "click" this.untracked.push}}>new</button>
+<button {{on "click" this.untracked.oldUnshift}}>old unshift</button>
+<button {{on "click" this.untracked.unshift}}>new unshift</button>
 
 
 
@@ -87,6 +93,10 @@
     </span>
   {{/each}}
 </p>
+
+<p>
+  <code>get helper: first</code> {{get this.tracked.items '0'}}
+</p>
 <p><code>this.tracked.firstObject</code>: {{this.tracked.items.firstObject}}</p>
 <p><code>this.tracked.lastObject</code>: {{this.tracked.items.lastObject}}</p>
 <p><code>this.tracked.first</code>: {{this.tracked.first}}</p>
@@ -98,3 +108,5 @@
 
 <button {{on "click" this.tracked.oldPush}}>old</button>
 <button {{on "click" this.tracked.push}}>new</button>
+<button {{on "click" this.tracked.oldUnshift}}>old unshift</button>
+<button {{on "click" this.tracked.unshift}}>new unshift</button>

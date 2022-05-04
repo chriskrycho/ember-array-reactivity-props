@@ -40,8 +40,16 @@ class Untracked {
     this.items.pushObject(this.items.length + 1);
   };
 
+  oldUnshift = () => {
+    this.items.unshiftObject(this.items.length + 1);
+  };
+
   push = () => {
     this.items.push(this.items.length + 1);
+  };
+
+  unshift = () => {
+    this.items.unshift(this.items.length + 1);
   };
 }
 
@@ -84,8 +92,16 @@ class Tracked {
     this.items.pushObject(this.items.length + 1);
   };
 
+  oldUnshift = () => {
+    this.items.unshiftObject(this.items.length + 1);
+  };
+
   push = () => {
     this.items.push(this.items.length + 1);
+  };
+
+  unshift = () => {
+    this.items.unshift(this.items.length + 1);
   };
 }
 

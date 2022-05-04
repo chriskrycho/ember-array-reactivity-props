@@ -3,7 +3,7 @@
 
   <select id="methods" {{on "change" this.onSelect}}>
     {{#each this.widgets as |widget|}}
-      <option value={{widget.name}} selected={{eq widget.name this.selectedWidget}}>{{widget.label}}</option>
+      <option value={{widget.name}} selected={{eq widget.name this.selectedWidget.name}}>{{widget.label}}</option>
     {{/each}}
   </select>
 
