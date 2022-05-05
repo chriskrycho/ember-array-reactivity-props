@@ -48,6 +48,10 @@ export default class ApplicationController extends Controller {
       name: 'set-each',
       label: 'setEach',
     },
+    {
+      name: 'invoke',
+      label: 'invoke',
+    },
   ];
 
   get selectedWidget() {
