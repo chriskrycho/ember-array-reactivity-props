@@ -1,0 +1,27 @@
+
+<div>
+  <h2>native array with prototype extensions</h2>
+  <p>
+    <code>native array</code>
+    {{this.untracked.items}}
+  </p>
+
+  <p><code>this.untracked.compacted</code>: {{this.untracked.compacted}}</p>
+  <p class="blue"><code>this.untracked.filterNulls</code>: {{this.untracked.filterNulls}}</p>
+
+  <button {{on "click" this.untracked.oldPush}}>old push</button>
+  <button {{on "click" this.untracked.push}}>new push</button>
+</div>
+
+<div>
+  <h2>tracked array (with prototype extensions)</h2>
+
+  <p><code>tracked array</code>
+    {{this.tracked.items}}
+  </p>
+
+  <p><code>this.tracked.compacted</code>: {{this.tracked.compacted}}</p>
+  <p class="blue"><code>this.tracked.filterNulls</code>: {{this.tracked.filterNulls}}</p>
+  <button {{on "click" this.tracked.oldPush}}>old push</button>
+  <button {{on "click" this.tracked.push}}>new push</button>
+</div>

@@ -1,0 +1,118 @@
+<h2>native array with prototype extensions</h2>
+<p>
+  <code>(first|last)Object</code>
+  {{#each this.untracked.items as |item|}}
+    <span class="
+      {{if (eq item this.untracked.items.firstObject) 'blue'}}
+      {{if (eq item this.untracked.items.lastObject) 'red'}}
+    ">
+      {{item}}
+    </span>
+  {{/each}}
+</p>
+
+<p>
+  <code>Array.prototype.at</code>
+  {{#each this.untracked.items as |item|}}
+    <span class="
+      {{if (eq item this.untracked.first) 'blue'}}
+      {{if (eq item this.untracked.last) 'red'}}
+    ">
+      {{item}}
+    </span>
+  {{/each}}
+</p>
+
+<p>
+  <code>objectAt</code>
+  {{#each this.untracked.items as |item|}}
+    <span class="
+      {{if (eq item this.untracked.firstObjectAt) 'blue'}}
+      {{if (eq item this.untracked.lastObjectAt) 'red'}}
+    ">
+      {{item}}
+    </span>
+  {{/each}}
+</p>
+
+<p>
+  <code>get helper: first</code> {{get this.untracked.items '0'}}
+</p>
+<p>
+  <code>length</code> {{this.untracked.items.length}}
+</p>
+
+<p><code>this.untracked.items.firstObject</code>: {{this.untracked.items.firstObject}}</p>
+<p><code>this.untracked.items.lastObject</code>: {{this.untracked.items.lastObject}}</p>
+<p><code>this.untracked.first</code>: {{this.untracked.first}}</p>
+<p><code>this.untracked.last</code>: {{this.untracked.last}}</p>
+<p><code>this.untracked.firstObjectAt</code>: {{this.untracked.firstObjectAt}}</p>
+<p><code>this.untracked.lastObjectAt</code>: {{this.untracked.lastObjectAt}}</p>
+<p><code>this.untracked.objectsAt</code>: {{this.untracked.objectsAt}}</p>
+<p><code>this.untracked.objectsAtEqu</code>: {{this.untracked.objectsAtEqu}}</p>
+
+
+<button {{on "click" this.untracked.oldPush}}>old</button>
+<button {{on "click" this.untracked.push}}>new</button>
+<button {{on "click" this.untracked.oldUnshift}}>old unshift</button>
+<button {{on "click" this.untracked.unshift}}>new unshift</button>
+
+
+
+<h2>tracked array with prototype extensions</h2>
+
+<p>
+  <code>(first|last)Object</code>
+  {{#each this.tracked.items as |item|}}
+    <span class="
+      {{if (eq item this.tracked.items.firstObject) 'blue'}}
+      {{if (eq item this.tracked.items.lastObject) 'red'}}
+    ">
+      {{item}}
+    </span>
+  {{/each}}
+</p>
+
+<p>
+  <code>Array.prototype.at</code>
+  {{#each this.tracked.items as |item|}}
+    <span class="
+      {{if (eq item this.tracked.first) 'blue'}}
+      {{if (eq item this.tracked.last) 'red'}}
+    ">
+      {{item}}
+    </span>
+  {{/each}}
+</p>
+
+<p>
+  <code>objectAt</code>
+  {{#each this.tracked.items as |item|}}
+    <span class="
+      {{if (eq item this.tracked.firstObjectAt) 'blue'}}
+      {{if (eq item this.tracked.lastObjectAt) 'red'}}
+    ">
+      {{item}}
+    </span>
+  {{/each}}
+</p>
+
+<p>
+  <code>get helper: first</code> {{get this.tracked.items '0'}}
+</p>
+<p>
+  <code>length</code> {{this.tracked.items.length}}
+</p>
+<p><code>this.tracked.firstObject</code>: {{this.tracked.items.firstObject}}</p>
+<p><code>this.tracked.lastObject</code>: {{this.tracked.items.lastObject}}</p>
+<p><code>this.tracked.first</code>: {{this.tracked.first}}</p>
+<p><code>this.tracked.last</code>: {{this.tracked.last}}</p>
+<p><code>this.tracked.firstObjectAt</code>: {{this.tracked.firstObjectAt}}</p>
+<p><code>this.tracked.lastObjectAt</code>: {{this.tracked.lastObjectAt}}</p>
+<p><code>this.tracked.objectsAt</code>: {{this.tracked.objectsAt}}</p>
+<p><code>this.tracked.objectsAtEqu</code>: {{this.tracked.objectsAtEqu}}</p>
+
+<button {{on "click" this.tracked.oldPush}}>old</button>
+<button {{on "click" this.tracked.push}}>new</button>
+<button {{on "click" this.tracked.oldUnshift}}>old unshift</button>
+<button {{on "click" this.tracked.unshift}}>new unshift</button>

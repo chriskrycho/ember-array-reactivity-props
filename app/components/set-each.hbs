@@ -1,0 +1,30 @@
+
+<div>
+  <h2>native array with prototype extensions</h2>
+  <p>
+    <code>native array</code>
+    {{#each this.untracked.items as |item|}}
+        {{item.name}}-{{item.zipCode}}
+    {{/each}}
+  </p>
+  <button {{on "click" this.untracked.setEachZipcode}}>setEach</button>
+  <button {{on "click" this.untracked.nativeSetEachZipcode}}>native set each</button>
+  <button {{on "click" this.untracked.oldPush}}>old push Jason</button>
+  <button {{on "click" this.untracked.push}}>new push Jason</button>
+</div>
+
+<div>
+  <h2>tracked array (with prototype extensions)</h2>
+
+    <p>
+    <code>native array</code>
+    {{#each this.tracked.items as |item|}}
+        {{item.name}}-{{item.zipCode}}
+    {{/each}}
+  </p>
+
+  <button {{on "click" this.tracked.setEachZipcode}}>setEach</button>
+  <button {{on "click" this.tracked.nativeSetEachZipcode}}>native set each</button>
+  <button {{on "click" this.tracked.oldPush}}>old push Jason</button>
+  <button {{on "click" this.tracked.push}}>new push Jason</button>
+</div>

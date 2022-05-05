@@ -1,0 +1,35 @@
+
+<div>
+  <h2>native array with prototype extensions</h2>
+  <p>
+    <code>native array</code>
+    {{#each this.untracked.items as |item|}}
+        {{item.food}}
+    {{/each}}
+  </p>
+
+  <p><code>this.untracked.isEveryFruit</code>: {{this.untracked.isEveryFruit}}</p>
+  <p class="blue"><code>this.untracked.everyFruit</code>: {{this.untracked.everyFruit}}</p>
+  <p><code>this.untracked.isAnyVeggie</code>: {{this.untracked.isAnyVeggie}}</p>
+  <p class="blue"><code>this.untracked.anyVeggie</code>: {{this.untracked.anyVeggie}}</p>
+
+  <button {{on "click" this.untracked.oldPush}}>old push celery</button>
+  <button {{on "click" this.untracked.push}}>new push celery</button>
+</div>
+
+<div>
+  <h2>tracked array (with prototype extensions)</h2>
+
+  <p><code>tracked array</code>
+    {{#each this.tracked.items as |item|}}
+        {{item.food}}
+    {{/each}}
+  </p>
+  <p><code>this.tracked.isEveryFruit</code>: {{this.tracked.isEveryFruit}}</p>
+  <p class="blue"><code>this.tracked.everyFruit</code>: {{this.tracked.everyFruit}}</p>
+  <p><code>this.tracked.isAnyVeggie</code>: {{this.tracked.isAnyVeggie}}</p>
+  <p class="blue"><code>this.tracked.anyVeggie</code>: {{this.tracked.anyVeggie}}</p>
+
+  <button {{on "click" this.tracked.oldPush}}>old push celery</button>
+  <button {{on "click" this.tracked.push}}>new push celery</button>
+  </div>

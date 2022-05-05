@@ -1,0 +1,38 @@
+
+<div>
+  <h2>native array with prototype extensions</h2>
+  <p>
+    <code>native array</code>
+    {{#each this.untracked.items as |item|}}
+        {{item.food}}
+    {{/each}}
+  </p>
+
+  <p><code>this.untracked.uniq</code>: {{this.untracked.uniq}}</p>
+  <p class="blue"><code>this.untracked.arrayWithSet</code>: {{this.untracked.arrayWithSet}}</p>
+
+  <p><code>this.untracked.toArrayList</code>: {{this.untracked.toArrayList}}</p>
+  <p class="blue"><code>this.untracked.arraySpread</code>: {{this.untracked.arraySpread}}</p>
+
+  <button {{on "click" this.untracked.oldPush}}>old push</button>
+  <button {{on "click" this.untracked.push}}>new push</button>
+</div>
+
+<div>
+  <h2>tracked array (with prototype extensions)</h2>
+
+  <p><code>tracked array</code>
+    {{#each this.tracked.items as |item|}}
+        {{item.food}}
+    {{/each}}
+  </p>
+
+  <p><code>this.tracked.uniq</code>: {{this.tracked.uniq}}</p>
+  <p class="blue"><code>this.tracked.arrayWithSet</code>: {{this.tracked.arrayWithSet}}</p>
+
+  <p><code>this.tracked.toArrayList</code>: {{this.tracked.toArrayList}}</p>
+  <p class="blue"><code>this.tracked.arraySpread</code>: {{this.tracked.arraySpread}}</p>
+
+  <button {{on "click" this.tracked.oldPush}}>old push</button>
+  <button {{on "click" this.tracked.push}}>new push</button>
+</div>

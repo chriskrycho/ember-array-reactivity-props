@@ -1,0 +1,34 @@
+
+<div>
+  <h2>native array with prototype extensions</h2>
+  <p>
+    <code>native array</code>
+    {{#each this.untracked.items as |item|}}
+        {{item.food}}
+    {{/each}}
+  </p>
+
+  <p><code>this.untracked.rejectFruit</code>: {{this.untracked.rejectFruit}}</p>
+  <p><code>this.untracked.rejectByFruit</code>: {{this.untracked.rejectByFruit}}</p>
+  <p class="blue"><code>this.untracked.filterNonFruit</code>: {{this.untracked.filterNonFruit}}</p>
+
+  <button {{on "click" this.untracked.oldPush}}>old push celery</button>
+  <button {{on "click" this.untracked.push}}>new push celery</button>
+</div>
+
+<div>
+  <h2>tracked array (with prototype extensions)</h2>
+
+  <p><code>tracked array</code>
+    {{#each this.tracked.items as |item|}}
+        {{item.food}}
+    {{/each}}
+  </p>
+
+  <p><code>this.tracked.rejectFruit</code>: {{this.tracked.rejectFruit}}</p>
+  <p><code>this.tracked.rejectByFruit</code>: {{this.tracked.rejectByFruit}}</p>
+  <p class="blue"><code>this.tracked.filterNonFruit</code>: {{this.tracked.filterNonFruit}}</p>
+
+  <button {{on "click" this.tracked.oldPush}}>old push celery</button>
+  <button {{on "click" this.tracked.push}}>new push celery</button>
+  </div>
